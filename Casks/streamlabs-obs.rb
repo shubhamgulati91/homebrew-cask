@@ -1,6 +1,6 @@
 cask "streamlabs-obs" do
-  version "1.0.6"
-  sha256 "b8a08ccc3bcfe562ab07d8b33e791b430f5b7cb9ea5a86abda17fa269e1f3b66"
+  version "1.4.0"
+  sha256 "ce7d5ffeea12507c24aaf12df322ce57235ca32c3f6228b1f00164d2824829c1"
 
   url "https://slobs-cdn.streamlabs.com/Streamlabs+OBS-#{version}.dmg"
   name "Streamlabs OBS"

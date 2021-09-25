@@ -1,12 +1,17 @@
 cask "microsoft-office" do
-  version "16.48.21041102"
-  sha256 "5e78cf692b8925a48e0b9f50402874f12293955444b4e6eace9505a4a5969379"
+  version "16.53.21091200"
+  sha256 "b71a4c058d219f6177397bfee75833c464a502f9cff7eec58e83c1ca91a09328"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
+  url "https://officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Office"
+  desc "Office suite"
   homepage "https://products.office.com/mac/microsoft-office-for-mac/"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525133"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: %w[
